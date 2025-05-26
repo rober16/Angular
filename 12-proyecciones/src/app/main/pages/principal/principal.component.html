@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-12">
+    <!-- Proyección simple -->
+    <h3>Proyección Simple</h3>
+    <app-proy-simple>
+      <p>Este es el contenido a mostrar... :D</p>
+      <p>Este es otro contenido a mostrar... :D</p>
+    </app-proy-simple>
+    <!-- FIN Proyección simple -->
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <!-- Proyección múltiple -->
+    <h3>Proyección Múltiple</h3>
+    <app-proy-multiple>
+      <p parte1>Primer contenido proyectado</p>
+      <p parte2>Segundo contenido proyectado</p>
+      <app-proy-simple parte3>
+        <p>Este es el contenido a mostrar 2... :D</p>
+        <p>Este es otro contenido a mostrar 2... :D</p>
+      </app-proy-simple>
+    </app-proy-multiple>
+    <!-- FIN Proyección múltiple -->
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <!-- Proyección condicional -->
+    <h3>Proyecciones Condicionales</h3>
+    <app-proy-condicional [tipo]="1"></app-proy-condicional>
+    <app-proy-condicional [tipo]="3"></app-proy-condicional>
+    <!-- FIN Proyección condicional -->
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <!-- Etiqueta ng-container -->
+    <h3>Etiqueta &lt;ng-container&gt;&lt;/ng-container&gt;</h3>
+    <app-etiqueta-ng-container></app-etiqueta-ng-container>
+    <!-- FIN Etiqueta ng-container -->
+  </div>
+</div>

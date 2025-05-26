@@ -1,0 +1,117 @@
+<h3 i18n>Formulario de carga de datos</h3>
+<form #iForm="ngForm" [formGroup]="form" class="col-12" (ngSubmit)="guardar()" invalidate>
+  <div class="row">
+    <div class="col-12 text-left"><b class="text-secondary" i18n>Datos Personales</b></div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6 mb-3">
+      <label for="iapellido" i18n>Apellido</label>
+      <input appAutofocus type="text" id="iapellido" formControlName="apellido" class="form-control" i18n-placeholder
+        placeholder="Ingresa tu apellido" value="" maxlength="100">
+      <small class="text-danger" *ngIf="iForm.submitted && form.controls['apellido'].hasError('required')" i18n>
+        Debes informar tu apellido.
+      </small>
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+      <label for="inombre" i18n>Nombre</label>
+      <input type="text" id="inombre" formControlName="nombre" class="form-control" i18n-placeholder
+        placeholder="Ingresa tu nombre" value="" maxlength="255">
+      <small class="text-danger" *ngIf="iForm.submitted && form.controls['nombre'].hasError('required')" i18n>
+        Debes informar tu nombre.
+      </small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6 mb-3">
+      <label for="iemail" i18n>Correo</label>
+      <input type="email" id="iemail" formControlName="correo" class="form-control" i18n-placeholder
+        placeholder="Ingresa tu correo" value="" maxlength="255">
+      <small class="text-danger" *ngIf="iForm.submitted">
+        <ng-container *ngIf="form.controls['correo'].hasError('required')" i18n>Debes informar tu
+          correo.</ng-container>
+        <ng-container *ngIf="form.controls['correo'].hasError('email')" i18n>El correo es
+          inválido.</ng-container>
+      </small>
+    </div>
+    <div class="col-12 col-md-3 mb-3">
+      <label for="iclave" i18n>Ingrese Clave</label>
+      <input type="password" id="iclave" formControlName="clave" class="form-control" placeholder="Ingresa una clave"
+        value="" maxlength="32">
+      <small class="text-danger" *ngIf="iForm.submitted">
+        <ng-container *ngIf="form.controls['clave'].hasError('required')" i18n>Debes informar tu clave.
+        </ng-container>
+        <ng-container *ngIf="form.controls['clave']?.value.length < 6" i18n>Debes informar una contraseña de
+          al menos 6 caracteres. </ng-container>
+      </small>
+    </div>
+    <div class="col-12 col-md-3 mb-3">
+      <label for="iconfirmar_clave" i18n>Repetir Clave</label>
+      <input type="password" id="iconfirmar_clave" class="form-control" formControlName="confirmarClave"
+        i18n-placeholder placeholder="Repite la clave" value="" maxlength="32">
+      <small class="text-danger" *ngIf="iForm.submitted">
+        <ng-container *ngIf="form.controls['confirmarClave'].hasError('required')" i18n>Debes confirmar tu
+          clave. </ng-container>
+        <ng-container *ngIf="form.controls['confirmarClave'].hasError('clavesMismatch')" i18n>Las
+          contraseñas deben coincidir.</ng-container>
+      </small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-2 mb-3">
+      <label for="iGeneroF" i18n>G&eacute;nero</label>
+      <div class="form-check" *ngFor="let g of generos">
+        <input type="radio" class="form-check-input" formControlName="codGenero" [value]="g.codigo"
+          [attr.id]="'iGenero' + g.codigo">
+        <label class="form-check-label" [attr.for]="'iGenero' + g.codigo">{{g.nombre}}</label>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3">
+      <label for="ifecha_nacimiento" i18n>Fecha de Nac.</label>
+      <input type="date" id="ifecha_nacimiento" formControlName="fechaNacimiento" class="form-control" value="">
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+      <label for="inacionalidad" i18n>Nacionalidad</label>
+      <select id="inacionalidad" formControlName="codNacionalidad" class="form-select">
+        <option value="" i18n>Debe seleccionar una nacionalidad</option>
+        <option *ngFor="let n of nacionalidades" [value]="n.codigo">{{n.nombre}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-left"><b class="text-secondary" i18n>Otros Datos</b></div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6 mb-3">
+      <label for="iequipo" i18n>Equipo Favorito</label>
+      <select id="iequipo" formControlName="equipos" size="5" multiple class="form-select">
+        <option *ngFor="let e of equipos" [value]="e.id">{{e.nombre}}</option>
+      </select>
+      <small class="text-danger" *ngIf="iForm.submitted && form.controls['equipos'].hasError('eqMismatch')" i18n>
+        Puedes elegir hasta 2 equipos.
+      </small>
+    </div>
+    <div class="col-12 col-md-6 mb-3" formArrayName="actividades">
+      <label i18n>Actividades</label>
+      <div class="form-check" *ngFor="let a of actividades">
+        <input type="checkbox" class="form-check-input" [value]="a.id" [attr.id]="'i' + a.id"
+          (change)="setActividades($event)" [checked]="a.checked">
+        <label class="form-check-label" [attr.for]="'i' + a.id">{{a.nombre}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <label for="iactividades" i18n>Otras Actividades</label>
+      <textarea cols="50" rows="5" id="iactividades" formControlName="otrasActividades" class="form-control"
+        i18n-placeholder placeholder="Mis actividades son..."></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button type="submit" class="btn btn-success" i18n>Guardar</button>
+      <button type="button" class="btn btn-danger ms-2" routerLink="/main" i18n>Cancelar</button>
+      <small class="ms-3 text-danger" *ngIf="iForm.submitted && iForm.invalid" i18n>Falta completar el
+        formulario</small>
+    </div>
+  </div>
+</form>

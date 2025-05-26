@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+      <h4 class="col-12">Factorial {{form.nro?.value}}</h4>
+  </div>
+  <form [formGroup]="factForm" class="row mb-3" (ngSubmit)="calcular()">
+      <div class="col-4">
+          <input #iNro type="number" class="form-control" formControlName="nro">
+          <small *ngIf="submitted && form.nro.errors && form.nro.errors.required" class="text-danger">Debes informar un número</small>
+      </div>
+      <div class="col-2">
+          <button [attr.id]="'iboton'" type="submit" class="btn btn-primary">Calcular</button>
+      </div>
+  </form>   
+  <div class="row" *ngIf="nros.length > 0">
+      <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th>X</th>
+                  <th>X!</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let nro of nros;let i = index">
+                  <td>{{i + 1}}</td>
+                  <td>{{nro}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>    
+</div>

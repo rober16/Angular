@@ -1,0 +1,49 @@
+<div class="container">
+  <h3>MiComponente ng18</h3>
+  <p class="alert" [ngClass]="{'alert-success': mostrar, 'alert-danger': !mostrar}">{{mensaje}}</p>
+
+  @if (marcas.length > 0) {
+  <ul>
+    @for (marca of marcas; track marca; let i = $index) {
+    <li [attr.id]="'id-' + i">{{marca}}</li>
+    }
+  </ul>
+  }
+  @else {
+  <p class="alert alert-info">No se registran marcas.</p>
+  }
+
+  @let lista = marcas$ | async;
+  <ul>
+    @for (marca of lista; track marca; let i = $index) {
+    <li [attr.id]="'id-' + i">{{marca}}</li>
+    }
+    @empty {
+    <li>No se registran marcas.</li>
+    }
+  </ul>
+
+  @if (mostrar) {
+  <div class="alert alert-warning">Hola Angular</div>
+  }
+  <button class="btn btn-primary" (click)="ver()">{{texto}}</button>
+
+  <div class="mt-3">
+    <input type="text" class="form-control" [(ngModel)]="nombre" placeholder="Informa tu nombre usando ngModel"
+      autofocus>
+    @if(nombre) {
+      <p class="alert alert-info mt-3">Tu nombre es: "{{nombre}}"</p>
+    }
+  </div>
+
+  <div class="mt-3">
+    <input type="text" class="form-control" [formControl]="nombreCtrl"
+      placeholder="Informa tu nombre usando FormControl" autofocus>
+    @if(nombreCtrl.value) {
+      <p class="alert alert-success mt-3">Tu nombre es: "{{nombreCtrl.value}}"</p>
+    }
+    @if(nombreCtrl.touched && nombreCtrl.hasError('required')) {
+      <small class="text-danger bg-white">El nombre es obligatorio.</small>
+    }
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <button class="btn btn-outline-info btn-block col-12 mb-2" routerLink="/main/pagina-1"
+        routerLinkActive="active">P&aacute;gina 1</button>
+      <button class="btn btn-outline-info btn-block col-12 mb-2" routerLink="/main/ruta"
+        routerLinkActive="active">P&aacute;gina 2</button>
+      <button class="btn btn-outline-info btn-block col-12 mb-2" routerLink="/main/ruta/pagina-3"
+        routerLinkActive="active">P&aacute;gina 3</button>
+      <button class="btn btn-outline-info btn-block col-12 mb-2" routerLink="/main/pagina-4"
+        routerLinkActive="active">P&aacute;gina 4</button>
+    </div>
+    <div class="col-10 body-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

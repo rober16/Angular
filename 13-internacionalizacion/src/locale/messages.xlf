@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es-AR" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/alert/alert.ts</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.slide-number" datatype="html">
+        <source> Slide <x id="INTERPOLATION" equiv-text="new BehaviorSu"/> of <x id="INTERPOLATION_1" equiv-text="p);
+
+	id = `ngb"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">151,155</context>
+        </context-group>
+        <note priority="1" from="description">Currently selected slide number read by screen reader</note>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">175,176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">198,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">291</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">307</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">324</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">338,340</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">357,359</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">378,381</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">399</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">411</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="this._config.a"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/progressbar/progressbar.ts</context>
+          <context context-type="linenumber">70,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">238,240</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">281</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">297,298</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">311</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">334,338</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">358,359</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">379,380</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">403,405</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">424,428</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">441</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">441</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">441</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/src/toast/toast.ts</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7546403253031591787" datatype="html">
+        <source>Error al conectarse al servicio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/handlers/app-error-handler.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="740484157946723524" datatype="html">
+        <source>Mensaje de error</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/message-dialog/message-dialog.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4798961227159743968" datatype="html">
+        <source>Cerrar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/message-dialog/message-dialog.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/message-dialog/message-dialog.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/components/modal-descartar/modal-descartar.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1972658076328460636" datatype="html">
+        <source>Descartar cambios</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/components/modal-descartar/modal-descartar.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5439185949823824645" datatype="html">
+        <source>¿Está seguro de descartar sus cambios?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/components/modal-descartar/modal-descartar.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6402951927316857780" datatype="html">
+        <source>Cancelar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/components/modal-descartar/modal-descartar.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3905178848571662288" datatype="html">
+        <source>Aceptar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/components/modal-descartar/modal-descartar.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/terminos/terminos.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2480783559871485681" datatype="html">
+        <source>Formulario de carga de datos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2009030607599084261" datatype="html">
+        <source>Datos Personales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6121280062403357056" datatype="html">
+        <source>Apellido</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3020863423205885551" datatype="html">
+        <source>Ingresa tu apellido</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6155524117643579676" datatype="html">
+        <source> Debes informar tu apellido. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5357661269973482487" datatype="html">
+        <source>Nombre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5677901507991545773" datatype="html">
+        <source>Ingresa tu nombre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7975819203689942792" datatype="html">
+        <source> Debes informar tu nombre. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6597520566647669940" datatype="html">
+        <source>Correo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1169576614413276633" datatype="html">
+        <source>Ingresa tu correo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4060845262635671210" datatype="html">
+        <source>Debes informar tu correo.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="103149418734356332" datatype="html">
+        <source>El correo es inválido.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3215930252080250027" datatype="html">
+        <source>Ingrese Clave</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5389524081610171157" datatype="html">
+        <source>Debes informar tu clave. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2391099304971104262" datatype="html">
+        <source>Debes informar una contraseña de al menos 6 caracteres. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3376807541425539695" datatype="html">
+        <source>Repetir Clave</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8802308682725345394" datatype="html">
+        <source>Repite la clave</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5114703218972396871" datatype="html">
+        <source>Debes confirmar tu clave. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1759912134761051317" datatype="html">
+        <source>Las contraseñas deben coincidir.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3718302304914654810" datatype="html">
+        <source>Género</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8254113646133170699" datatype="html">
+        <source>Fecha de Nac.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2528954873905403477" datatype="html">
+        <source>Nacionalidad</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2323318298167218197" datatype="html">
+        <source>Debe seleccionar una nacionalidad</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8982156829128748061" datatype="html">
+        <source>Otros Datos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6727452991358016733" datatype="html">
+        <source>Equipo Favorito</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="315702121289130025" datatype="html">
+        <source> Puedes elegir hasta 2 equipos. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5705819614938239952" datatype="html">
+        <source>Actividades</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9140615761943919639" datatype="html">
+        <source>Otras Actividades</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4328496834717657312" datatype="html">
+        <source>Mis actividades son...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1372173599787735409" datatype="html">
+        <source>Guardar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4114183654811857436" datatype="html">
+        <source>Falta completar el formulario</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/formulario/formulario.component.html</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8846313586904707062" datatype="html">
+        <source>Personas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5131506337392578326" datatype="html">
+        <source>Filtrar por apellido o nombre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2153980152639237955" datatype="html">
+        <source>Editar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7099780434896458019" datatype="html">
+        <source>Borrar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1701614968340454968" datatype="html">
+        <source> No existen personas registradas </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7776873252561096935" datatype="html">
+        <source>Nuevo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/listado/listado.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4296710904271808416" datatype="html">
+        <source>Términos y Condiciones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/terminos/terminos.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2275333667453375506" datatype="html">
+        <source>Ud. está por gestionar información sensible, debe aceptar los términos y condiciones de uso de la aplicación.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/pages/terminos/terminos.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

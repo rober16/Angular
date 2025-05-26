@@ -1,0 +1,20 @@
+<div class="alert alert-info">
+  <h4>Construcción de código</h4>
+  <div class="d-flex flex-row">
+      <!-- HTML INVÁLIDO -->
+      <ul>
+          <div *ngFor="let item of items; let i = index" class="bg-warning p-3 mb-2">
+              <li *ngIf="i % 2 == 0">{{item}}</li>                
+          </div>
+      </ul>
+      <!-- FIN HTML INVÁLIDO -->
+      <!-- HTML VÁLIDO -->
+      <ul>
+          <ng-container *ngFor="let item of items; let i = index">
+              <li *ngIf="i % 2 == 0">{{item}}</li>                
+          </ng-container>
+      </ul>
+      <!-- FIN HTML VÁLIDO -->
+  </div>
+</div>
+

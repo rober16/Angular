@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-12">
+    <h4>Personas</h4>
+    <table class="table" *ngIf="personas.length > 0">
+      <thead>
+        <tr>
+          <th>Apellido</th>
+          <th>Nombre</th>
+          <th>Género</th>
+          <th>Nacionalidad</th>
+          <th>Correo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let persona of personas">
+          <td>{{ persona.apellido }}</td>
+          <td>{{ persona.nombre }}</td>
+          <td>{{ persona.nomGenero }}</td>
+          <td>{{ persona.nomNacionalidad }}</td>
+          <td><a [attr.href]="'mailto:'+ persona.correo">{{ persona.correo }}</a></td>
+          <td>
+            <div class="d-flex">
+              <button class="btn btn-warning btn-sm me-2" [routerLink]="'/main/editar/' + persona.idPersona">Editar</button>
+              <button class="btn btn-danger btn-sm" (click)="eliminar(persona.idPersona)">Borrar</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="personas.length == 0" class="alert alert-info">
+      No existen personas registradas
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-success" routerLink="/main/nuevo">Nuevo</button>    
+  </div>
+</div>
+

@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-12">
+    <h4 i18n>Personas</h4>
+    <input appAutofocus type="text" class="form-control mt-2" [formControl]="filtrarCtrl" i18n-placeholder
+      placeholder="Filtrar por apellido o nombre" maxlength="255">
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-12">
+    <table class="table" *ngIf="personas.length > 0">
+      <thead>
+        <tr>
+          <th i18n>Apellido</th>
+          <th i18n>Nombre</th>
+          <th i18n>Género</th>
+          <th i18n>Nacionalidad</th>
+          <th i18n>Correo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let persona of personas|filtrarPor:['apellido', 'nombre']:filtrarCtrl.value">
+          <td>{{ persona.apellido }}</td>
+          <td>{{ persona.nombre }}</td>
+          <td>{{ persona.nomGenero }}</td>
+          <td>{{ persona.nomNacionalidad }}</td>
+          <td><a [attr.href]="'mailto:'+ persona.correo">{{ persona.correo }}</a></td>
+          <td>
+            <div class="d-flex">
+              <button class="btn btn-warning btn-sm me-2" [routerLink]="'/main/editar/' + persona.idPersona"
+                i18n>Editar</button>
+              <button class="btn btn-danger btn-sm" (click)="eliminar(persona.idPersona)" i18n>Borrar</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="personas.length == 0" class="alert alert-info" i18n>
+      No existen personas registradas
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-success" routerLink="/main/nuevo" i18n>Nuevo</button>
+  </div>
+</div>

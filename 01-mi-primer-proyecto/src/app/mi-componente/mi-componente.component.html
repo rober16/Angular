@@ -1,0 +1,41 @@
+<div class="container">
+  <h3>MiComponente</h3>
+  <p class="alert" [ngClass]="{'alert-success': mostrar, 'alert-danger': !mostrar}">{{mensaje}}</p>
+
+  <ul *ngIf="marcas.length > 0">
+    <li *ngFor="let marca of marcas;let i = index" [attr.id]="'id-' + i">
+      {{marca}}
+    </li>
+  </ul>
+
+  <p class="alert alert-info" *ngIf="marcas.length == 0">No se registran marcas.</p>
+
+  <div *ngIf="marcas$ | async as lista; else noDatos">
+    <ul>
+      <li *ngFor="let marca of lista; let i = index" [attr.id]="'id-' + i">
+        {{marca}}
+      </li>
+    </ul>
+  </div>
+  <ng-template #noDatos>
+    <p class="alert alert-info">No se registran marcas.</p>
+  </ng-template>
+
+  <div *ngIf="mostrar" class="alert alert-warning">¡Hola Angular!</div>
+  <button class="btn btn-primary" (click)="ver()">{{texto}}</button>
+
+  <div class="mt-3">
+    <input type="text" class="form-control" [(ngModel)]="nombre" placeholder="Informa tu nombre usando ngModel"
+      autofocus>
+    <p class="alert alert-info mt-3" *ngIf="nombre">Tu nombre es: "{{nombre}}"</p>
+  </div>
+
+  <div class="mt-3">
+    <input type="text" class="form-control" [formControl]="nombreCtrl"
+      placeholder="Informa tu nombre usando FormControl" autofocus>
+    <p class="alert alert-success mt-3" *ngIf="nombreCtrl.value">Tu nombre es: "{{nombreCtrl.value}}"</p>
+    <small class="text-danger" *ngIf="nombreCtrl.touched && nombreCtrl.hasError('required')">El nombre es
+      obligatorio.</small>
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+<form #iForm="ngForm" [formGroup]="info" (ngSubmit)="ok()">
+  <div class="modal-header">
+    <h4 class="modal-title">Mis datos</h4>
+    <button type="button" class="btn close" aria-label="Cerrar" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="iFirstName">Tu nombre es</label>
+      <input #iFN type="text" class="form-control" id="iFirstName" formControlName="firstName"
+        placeholder="Escribe tu nombre">
+      <small class="text-danger" *ngIf="iForm.submitted && firstName.errors">
+        <ng-container *ngIf="firstName.errors['required']">Debes decirnos tu nombre</ng-container>
+        <ng-container *ngIf="firstName.errors['maxlength']">Tu nombre no puede superar los 255 caracteres</ng-container>
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="iLastName">Tu apellido es</label>
+      <input type="text" class="form-control" id="iLastName" formControlName="lastName"
+        placeholder="Escribe tu apellido">
+      <small class="text-danger" *ngIf="iForm.submitted && lastName.errors">
+        <ng-container *ngIf="lastName.errors['required']">Debes decirnos tu apellido</ng-container>
+        <ng-container *ngIf="lastName.errors['maxlength']">Tu apellido no puede superar los 40 caracteres</ng-container>
+      </small>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="close()">Cancelar</button>
+    <button type="submit" class="btn btn-success">Aceptar</button>
+  </div>
+</form>
