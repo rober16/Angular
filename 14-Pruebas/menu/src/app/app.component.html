@@ -1,0 +1,11 @@
+<h2>Menu</h2>
+<p *ngIf="mostrar">Este texto se puede ocultar</p>
+
+
+<div class="row col-md-12">
+  <div class="col-md-4" *ngFor="let marca of marcas">
+    <button type="button" class="btn btn-primary">{{marca}}</button>
+  </div>
+</div>
+<app-envio-datos></app-envio-datos>
+<app-padre></app-padre> 
