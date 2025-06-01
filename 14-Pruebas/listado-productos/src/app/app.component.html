@@ -1,0 +1,21 @@
+<h2>Lista de Productos</h2>
+
+<!-- Mostrar u ocultar la lista -->
+<button (click)="mostrarLista = !mostrarLista">
+  {{ mostrarLista ? 'Ocultar' : 'Mostrar' }} productos
+</button>
+
+<!-- Enlace bidireccional para agregar productos -->
+<input [(ngModel)]="nuevoProducto" placeholder="Nuevo producto">
+<button (click)="agregarProducto()">Agregar</button>
+
+<!-- Mostrar lista solo si mostrarLista es true -->
+<ul *ngIf="mostrarLista">
+  <li
+    *ngFor="let producto of productos; let i = index"
+    [ngClass]="{ 'producto-par': i % 2 === 0, 'producto-impar': i % 2 !== 0 }"
+  >
+    {{ i + 1 }}. {{ producto }}
+    <button (click)="eliminarProducto(i)">Eliminar</button>
+  </li>
+</ul>

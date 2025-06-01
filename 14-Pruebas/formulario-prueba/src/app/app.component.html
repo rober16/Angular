@@ -1,3 +1,26 @@
-<label for="nombre">Nombre:</label>
-<input id="nombre" [formControl]="nombreControl" />
-<p>Valor: {{ nombreControl.value }}</p>
+<form [formGroup]="formulario" (ngSubmit)="enviar()">
+    
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre" />
+  
+    <div *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
+        <small *ngIf="formulario.get('nombre')?.errors?.['required']">El nombre es obligatorio.</small>
+    </div>
+
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email"/>
+  
+    <div *ngIf="formulario.get('email')?.invalid && formulario.get('email')?.touched">
+        <small *ngIf="formulario.get('email')?.errors?.['required']">El email es obligatorio.</small>
+        <small *ngIf="formulario.get('email')?.errors?.['email']">Formato de email inválido.</small>
+    </div>
+
+    <select class="form-select" aria-label="Default select example" formControlName="sexo">
+        <option value="X">Seleccione un Sexo</option>
+        <option value="H">Hombre</option>
+        <option value="M">Mujer</option>
+    </select>
+
+  <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+  
+</form>
