@@ -1,0 +1,4 @@
+<p>Mensaje del padre: {{ mensaje }}</p>
+<br>
+<app-nieto [valor]="valorNieto" (valorCambio)="actualizarValorNieto($event)"></app-nieto>
+<p>Valor recibido de Nieto: {{ valorNieto }}</p>
