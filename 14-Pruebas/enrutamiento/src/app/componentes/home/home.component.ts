@@ -1,13 +1,16 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy{
+  constructor(private router: Router) {}
+  
   mensaje: string = 'Componente Home'
 
   ngOnInit(): void {
@@ -16,5 +19,9 @@ export class HomeComponent implements OnInit, OnDestroy{
 
   ngOnDestroy(): void {
     this.mensaje = 'Se elimino el componente';
+  }
+
+   goToAbout() {
+    this.router.navigate(['/page/2']);
   }
 }

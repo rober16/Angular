@@ -1,1 +1,7 @@
 <p>page works!</p>
+<p>parametro: {{tipo}}</p>
+<div [ngSwitch]="tipo">
+  <p *ngSwitchCase="'1'">Vista de administrador</p>
+  <p *ngSwitchCase="'2'">Vista de usuario</p>
+  <p *ngSwitchDefault>Tipo no reconocido</p>
+</div>
