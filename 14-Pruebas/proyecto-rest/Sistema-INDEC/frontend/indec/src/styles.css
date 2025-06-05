@@ -1,0 +1,31 @@
+/* Ocultar header y footer cuando el Splash Screen esté activo */
+body.splash-screen-active app-header,
+body.splash-screen-active app-footer {
+  display: none;
+}
+
+/* Ajustar el contenedor principal para ocupar toda la pantalla */
+body.splash-screen-active div.splash-layout-active {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body.splash-screen-active div.splash-layout-active > .p-3 {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; 
+}
+
+/* Ajustar router-outlet para pantalla completa si es necesario */
+body.splash-screen-active router-outlet {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+

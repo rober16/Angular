@@ -1,0 +1,30 @@
+<div class="home-container">
+  <div class="jumbotron text-center bg-primary text-light">
+    <div class="row m-n3">
+      <h1 class="display-4" i18n>Bienvenido al INDEC</h1>
+      <p class="lead" i18n>Estadísticas y datos de Argentina en un solo lugar.</p>
+      <hr class="my-4" />
+      <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            class="form-control"
+            placeholder="¿Qué producto estas buscando?..."
+            i18n-placeholder
+          />
+        </div>
+        <div class="col-auto">
+          <button 
+          class="btn btn-secondary" 
+          [routerLink]="['/inicio/productos']" 
+          (click)="buscarProducto()"
+          i18n>
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

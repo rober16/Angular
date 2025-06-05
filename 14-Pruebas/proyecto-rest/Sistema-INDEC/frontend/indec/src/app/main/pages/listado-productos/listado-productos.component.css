@@ -1,0 +1,172 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+}
+
+.cart-icon {
+  font-size: 24px;
+  position: relative;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 14px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.product-card button {
+  background-color: #2b5698;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.product-card button:hover {
+  background-color: #1368c4;
+}
+
+.boton-desactivado {
+  background-color: gray !important;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1;
+}
+
+.jumbotron {
+  padding: 1rem 1rem;
+  margin-top: 0px;
+  background-color: #004085 !important;
+}
+.btn-secondary {
+  background-color: #004085;
+}
+
+product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  grid-gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Estira los elementos para que ocupen todo el ancho */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.product-card button {
+  /* Estilos adicionales para el botón si son necesarios */
+  margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.boton-desactivado {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.boton-agregado {
+  background-color: green !important;
+  color: white !important;
+}
+
+/* SECCION APLICAR FILTROS */
+
+/* Contenedor general de filtros */
+.filtros-container {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin: 1rem auto;
+  max-width: 900px;
+}
+
+/* Filas internas con menos separación */
+.filtros-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Columnas de rubros y categorías */
+.filtros-col {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Títulos de columna */
+.filtros-col h5 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Checkboxes alineados */
+.filtros-col label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.filtros-col input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Botón aplicar filtros */
+.boton-aplicar {
+  width: 100%;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  background-color: #004085;
+}
+

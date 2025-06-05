@@ -1,0 +1,207 @@
+/* src/app/main/components/header/header.component.css */
+
+/* ================== */
+/* Estilos Navbar     */
+/* ================== */
+.navbar {
+  padding: 10px 20px;
+  background-color: #eaeaea;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #2b5698;
+  font-size: 1rem;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #5f5e5e;
+}
+
+/* ================== */
+/* Estilos Ícono Carrito */
+/* ================== */
+.cart-icon {
+  margin-right: 15px;
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ================== */
+/* Estilos Modal Carrito */
+/* ================== */
+.cart-modal {
+  position: fixed; /* Posición fija relativa a la ventana */
+  top: 0;
+  right: 0;
+  width: 320px; /* Ancho del modal lateral */
+  height: 100%; /* Altura completa */
+  background: white; /* Fondo blanco opaco (importante para no ver detrás) */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  padding: 15px;
+  display: flex; /* Usar flexbox para la estructura interna */
+  flex-direction: column; /* Contenido apilado verticalmente */
+  border-radius: 8px 0 0 8px; /* Bordes redondeados en el lado visible */
+
+  /* --- LA CLAVE PARA QUE ESTÉ POR ENCIMA DEL MAPA --- */
+  z-index: 1050;  /* Valor alto, superior a los z-index típicos de Leaflet (controles ~1000) */
+}
+
+.cart-content {
+  display: flex; /* Flexbox para controlar el contenido */
+  flex-direction: column; /* Apilar verticalmente */
+  height: 100%; /* Ocupar toda la altura del modal */
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between; /* Título a la izquierda, botón a la derecha */
+  align-items: center; /* Centrar verticalmente */
+  border-bottom: 2px solid #eee; /* Línea separadora */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  flex-shrink: 0; /* Evita que el header se encoja */
+}
+
+/* Estilo específico para el botón de cerrar dentro del header */
+.cart-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem; /* Tamaño del icono '✖' */
+    cursor: pointer;
+    padding: 0;
+    line-height: 1; /* Ajuste vertical */
+    color: #888; /* Color grisáceo */
+}
+.cart-header .close-btn:hover {
+    color: #333; /* Más oscuro al pasar el ratón */
+}
+
+/* Contenedor de los items del carrito */
+.cart-items {
+  flex-grow: 1; /* Permite que esta sección ocupe el espacio disponible */
+  overflow-y: auto; /* Añade scroll si los items exceden el espacio */
+  padding: 0;
+  list-style: none; /* Quita los puntos de la lista */
+  margin-bottom: 15px; /* Espacio antes del formulario/botón de comparar */
+}
+
+/* Estilo de cada item individual en el carrito */
+.cart-item {
+  display: flex;
+  align-items: center; /* Centrar verticalmente imagen, info y botón */
+  padding: 10px 5px; /* Espaciado interno (menos padding horizontal para más espacio) */
+  border-bottom: 1px solid #ddd; /* Separador entre items */
+}
+
+.cart-item-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover; /* Escala la imagen correctamente */
+  margin-right: 10px;
+  border-radius: 4px;
+  flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.cart-item-info {
+  flex-grow: 1; /* Ocupa el espacio restante */
+  margin-right: 10px; /* Espacio antes del botón de borrar */
+}
+
+.cart-item-name {
+  margin: 0%;
+  font-weight: bold;
+  font-size: 0.9rem; /* Ligeramente más pequeño si es necesario */
+}
+
+.cart-item-subname{
+  margin: 0%;
+  font-size: 0.8rem;
+}
+.cart-item-quantity { /* Si añades cantidad en el futuro */
+  font-size: 0.8rem;
+  color: gray;
+}
+
+/* Mensaje cuando el carrito está vacío */
+.empty-cart-msg {
+  text-align: center;
+  color: gray;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Botón para eliminar un item */
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #dc3545; /* Rojo Bootstrap para peligro */
+  padding: 5px; /* Área de click un poco más grande */
+  flex-shrink: 0; /* Evita que el botón se encoja */
+}
+.delete-btn:hover {
+  color: #a71d2a; /* Rojo más oscuro al pasar el ratón */
+}
+
+/* Estilos para el formulario dentro del modal */
+.cart-modal form {
+  margin-top: auto; /* Empuja el formulario y el botón hacia abajo si hay espacio */
+  padding-top: 15px; /* Espacio sobre el formulario */
+  border-top: 1px solid #eee; /* Separador opcional */
+  flex-shrink: 0; /* Evita que el formulario se encoja */
+}
+
+.cart-modal label {
+  margin-bottom: 5px; /* Espacio entre label y select */
+  display: block; /* Label en línea propia */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cart-modal .form-select {
+  margin-bottom: 10px; /* Espacio debajo de cada select */
+  font-size: 0.9rem;
+}
+
+/* Botón para ir a Comparar */
+.view-cart-btn {
+  width: 100%;
+  background: #0056b3; /* Azul Bootstrap primario */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  /* margin-top: auto;  Quitado si el form ya usa margin-top: auto */
+  border-radius: 4px;
+  font-size: 1rem;
+  flex-shrink: 0; /* Evita que el botón se encoja */
+}
+
+.view-cart-btn:disabled {
+  background: #ccc; /* Gris claro cuando está deshabilitado */
+  color: #666; /* Texto gris oscuro */
+  cursor: not-allowed;
+}
+.view-cart-btn:not(:disabled):hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}

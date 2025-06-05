@@ -1,0 +1,4 @@
+.sucursales-scroll {
+    max-height: 400px;    /* Puedes ajustar el valor según necesites */
+    overflow-y: auto;     /* Habilita el scroll vertical */
+  }

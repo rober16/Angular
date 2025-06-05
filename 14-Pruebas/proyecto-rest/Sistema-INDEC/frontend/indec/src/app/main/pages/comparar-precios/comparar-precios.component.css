@@ -1,0 +1,174 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px; /* Margen alrededor del contenido */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+select{
+  margin-bottom: 5%;
+}
+
+button {
+  background-color: #2b5698;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1368c4;
+}
+
+.scrollable-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 500px; /* Ajusta según sea necesario */
+  padding: 10px;
+  background-color: #eaeaea; /* Fondo ligeramente grisáceo */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombreado sutil */
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 15px; /* Aumenta el padding para más espacio */
+  border-bottom: 1px solid #5e5c5c;
+}
+
+/* Elimina el borde inferior del último elemento */
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-img {
+  width: 80px; /* Ajusta el tamaño */
+  height: 80px; /* Ajusta el tamaño */
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-name {
+  font-weight: 500; /* Ligero bold */
+  font-size: 20px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888; /* Gris más suave */
+  transition: color 0.2s ease-in-out; /* Transición suave */
+}
+
+.delete-btn:hover {
+  color: #e74c3c; /* Rojo al pasar el ratón */
+}
+
+.empty-cart-msg {
+  text-align: center;
+  color: gray;
+  margin-top: 20px;
+}
+
+.resultados{
+  padding: 20px;
+}
+
+
+/* Tabla resultados  */
+
+/*
+.tabla-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #2b5698;
+  color: white;
+}
+
+td:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+*/
+/* Estilos para la tabla de resultados */
+.tabla-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; /* Unifica los bordes de las celdas */
+  border-spacing: 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #2b5698;
+  color: white;
+}
+
+
+/* Resaltar la fila del total */
+tr:last-child {
+  font-weight: bold; /* Negrita para la fila del total */
+}
+
+/* Resaltar el supermercado ganador */
+.ganador {
+  background-color: #2b9844;
+  color: white;
+}
+
+/* Resaltar el mejor precio */
+.mejor-precio {
+  color: #FFC300;
+  font-weight: bold;
+}
+
+
+/* Estilo para celdas sin valor */
+.sin-valor {
+  color: #888; /* Gris claro para indicar ausencia de valor */
+}

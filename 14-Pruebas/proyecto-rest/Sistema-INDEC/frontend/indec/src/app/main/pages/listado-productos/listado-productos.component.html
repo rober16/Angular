@@ -1,0 +1,167 @@
+<h3 i18n>PRODUCTOS</h3>
+<div class="row">
+  <div class="col-9">
+    <!-- Input de búsqueda -->
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="onSearchChange()"
+      class="m-1 form-control"
+      placeholder="¿Qué producto estas buscando?..."
+      i18n-placeholder
+    />
+  </div>
+  <div class="col-3">
+    <button class="btn btn-secondary" (click)="toggleFiltros()" >
+      {{ mostrarFiltros ? 'Ocultar Filtros' : 'Agregar Filtros' }}
+    </button>
+    <button class="btn btn-secondary" (click)="toggleFiltros()">
+        {{ obtenerTituloBotonFiltro(mostrarFiltros) }}
+    </button>
+    <button class="m-1 btn btn-danger" (click)="limpiarFiltros()" i18n>
+      Limpiar Filtros
+    </button>
+  </div> 
+  
+  <!-- Acordeón de filtros -->
+  <div *ngIf="mostrarFiltros" class="accordion" id="filtroAccordion">
+  
+  <!-- Filtro de Rubros -->
+  <br>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingRubros">
+      <button 
+        class="m-1 accordion-button" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#collapseRubros" 
+        aria-expanded="false" 
+        aria-controls="collapseRubros"
+        i18n>
+        Rubros y Categorias
+      </button>
+    </h2>
+    <div id="collapseRubros" class="accordion-collapse collapse show" aria-labelledby="headingRubros" data-bs-parent="#filtroAccordion">
+      <!-- -->
+      <div class="filtros-row">
+        <div class="m-3 filtros-col">
+          <h5 i18n>Rubros</h5>
+          <div class="accordion-body">
+            <div *ngFor="let rubro of rubros" class="form-check">
+              <input class="form-check-input" type="checkbox" [id]="'rubro_' + rubro.nroRubro"
+                     [checked]="rubrosSeleccionados.includes(rubro.nroRubro)"
+                     (change)="onRubroCheckboxChange($event, rubro.nroRubro)">
+              <label class="form-check-label" [for]="'rubro_' + rubro.nroRubro">
+                {{ rubro.nomRubro }}
+              </label>
+            </div>
+            
+          </div>
+        </div>
+    
+        <div class="m-3 filtros-col">
+          <h5 i18n>Categorías</h5>
+          <div class="accordion-body">
+            
+            <div *ngIf="categoriasFiltradas.length === 0" i18n>Seleccioná un rubro para ver categorías.</div>
+            <div *ngFor="let categoria of categoriasFiltradas" class="form-check">
+              <input class="form-check-input" type="checkbox" [id]="'categoria_' + categoria.nroCategoria"
+                     [checked]="categoriasSeleccionadas.includes(categoria.nroCategoria)"
+                     (change)="onCategoriaCheckboxChange($event, categoria.nroCategoria)">
+              <label class="form-check-label" [for]="'categoria_' + categoria.nroCategoria">
+                {{ categoria.nomCategoria }}
+              </label>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- Marcas -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingMarcas">
+      <button 
+        class="accordion-button collapsed" 
+        type="button" 
+        data-bs-toggle="collapse" data-bs-target="#collapseMarcas" 
+        aria-expanded="false" aria-controls="collapseMarcas"
+        i18n>
+        Marcas
+      </button>
+    </h2>
+    <div id="collapseMarcas" class="accordion-collapse collapse" aria-labelledby="headingMarcas" data-bs-parent="#filtroAccordion">
+      <div class="accordion-body">
+        <div *ngFor="let marca of marcas" class="form-check">
+          <input class="form-check-input" type="checkbox" [id]="'marca_' + marca.nroMarca"
+                 [checked]="marcasSeleccionadas.includes(marca.nroMarca)"
+                 (change)="onMarcaCheckboxChange($event, marca.nroMarca)">
+          <label class="form-check-label" [for]="'marca_' + marca.nroMarca">
+            {{ marca.nomMarca }}
+          </label>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <!-- Tipos de Productos -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTipos">
+      <button 
+        class="accordion-button collapsed" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#collapseTipos" 
+        aria-expanded="false" aria-controls="collapseTipos"
+        i18n>
+        Tipos de Productos
+      </button>
+    </h2>
+    <div id="collapseTipos" class="accordion-collapse collapse" aria-labelledby="headingTipos" data-bs-parent="#filtroAccordion">
+      <div class="accordion-body">
+        <div *ngFor="let tipo of tiposProductos" class="form-check">
+          <input class="form-check-input" type="checkbox" [id]="'tipo_' + tipo.nroTipoProducto"
+                 [checked]="tiposProductosSeleccionados.includes(tipo.nroTipoProducto)"
+                 (change)="onTiposProductosCheckboxChange($event, tipo.nroTipoProducto)">
+          <label class="form-check-label" [for]="'tipo_' + tipo.nroTipoProducto">
+            {{ tipo.nomTipoProducto }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  <!-- Botón para aplicar filtros -->
+<div class="mt-3">
+  <button class="btn btn-success" (click)="aplicarFiltros()" i18n>Aplicar Filtros</button>
+</div>
+</div>
+
+
+
+  
+</div>
+
+<form #iForm="ngForm" [formGroup]="form" class="col-12" invalidate>
+  <div class="row ">
+    
+    <div class="col-12 mb-3">
+      <div class="product-grid">
+        <div *ngFor="let producto of productosFiltrados" class="product-card">
+          <img [src]="producto.imagen" alt="{{ producto.nomProducto }}" />
+          <h4>{{ producto.nomProducto }}</h4>
+          <p>{{ producto.nomMarca }}</p>
+          <button
+            (click)="agregarAlCarrito(producto)"
+            [disabled]="estaDeshabilitado(producto.codBarra)"
+            [ngClass]="obtenerClaseBoton(producto)">
+            {{ obtenerTituloBoton(producto) }}
+          </button>
+        </div>
+        
+      </div>
+      <div *ngIf="productosFiltrados.length === 0 && searchTerm.length >= 3" 
+        class="alert alert-warning text-center" i18n>
+        😕 No se encontraron productos para tu búsqueda.
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,19 @@
+/* src/app/main/components/home/home.component.css */
+.jumbotron {
+    padding: 3rem 1rem;
+    margin-top: 20px;
+    background-color: #004085 !important;
+  }
+  .btn-secondary {
+    background-color: #6c757d;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f1f1f1;
+  }
+  

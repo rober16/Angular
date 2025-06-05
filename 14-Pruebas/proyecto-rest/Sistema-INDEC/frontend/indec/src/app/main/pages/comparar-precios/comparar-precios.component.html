@@ -1,0 +1,77 @@
+<form #iForm="ngForm" [formGroup]="form" class="col-12" invalidate>
+  <div class="row">
+    <div class="mt-3 col-4">
+      <h2 i18n>Ubicación: {{ubicacion?.nomLocalidad}}, {{ubicacion?.nomProvincia}}</h2>
+    </div>
+    <div class="col-8">
+      <button class="btn btn-secondary" (click)="cambiarUbicacion()" i18n>
+        Cambiar Ubicacion
+      </button>
+    </div>
+  </div>  
+  
+  <div class="row">
+    <div class="col-12 col-md-12 mb-3">
+      <div class="row">
+        <div class="col-12 col-md-4 mb-3">
+          <label for="iprovincia" i18n>Provincia</label>
+          <select id="iprovincia" formControlName="codProvincia" class="form-select">
+            <option value="" i18n>Debe seleccionar una provincia</option>
+            <option *ngFor="let n of provincias" [value]="n.codProvincia">{{n.nomProvincia}}</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <label for="ilocalidad" i18n>Localidad</label>
+          <select id="ilocalidad" formControlName="codLocalidad" class="form-select">
+            <option value="" i18n>Debe seleccionar una localidad</option>
+            <option *ngFor="let n of localidadesFiltradas" [value]="n.nroLocalidad">{{ n.nomLocalidad }}</option>
+          </select>
+        </div>
+        
+      </div>        
+    </div>
+  </div>
+  
+  <div class="row resultados">
+    <div class="col-12 tabla-container"> <!-- Agrega el contenedor con la clase -->
+      <table *ngIf="productosImg.length > 0 && supermercados.length > 0">
+        <thead>
+          <tr>
+            <th i18n>Productos</th>
+            <th *ngFor="let supermercado of supermercados" [class.ganador]="esSupermercadoGanador(supermercado)">
+             {{ supermercado }}<p *ngIf="esSupermercadoGanador(supermercado)">🏆🏆🏆​</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productosImg">
+            <td>
+              <span>
+                <img [src]="producto.imagen" alt="{{ producto.nomProducto }}" style="max-width: 50px; max-height: 50px; vertical-align: middle; margin-right: 5px;">  <!-- Agrega margin-right para separar la imagen del texto -->
+                {{ producto.nomProducto }}
+              </span>
+            </td>
+            <td *ngFor="let supermercado of supermercados">
+              <ng-container *ngIf="tablaPrecios[producto.nomProducto] as productoPrecios">
+                <span
+                  [class.mejor-precio]="esMejorPrecio(producto, supermercado)"
+                  [class.sin-valor]="!productoPrecios[supermercado]"
+                >
+                  $ {{ productoPrecios[supermercado] || '-' }}
+                </span>
+              </ng-container>
+              <ng-container *ngIf="!tablaPrecios[producto.nomProducto]">  -  </ng-container>
+            </td>
+          </tr>
+          <tr>
+            <td i18n><b>TOTAL</b></td>
+            <td *ngFor="let supermercado of supermercados" [class.ganador]="esSupermercadoGanador(supermercado)">
+              <b>$ {{ totales[supermercado] }}</b> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="productosImg.length === 0" class="text-center" i18n>No hay resultados para mostrar.</p>
+    </div>
+  </div>
+</form>

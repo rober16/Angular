@@ -1,0 +1,8 @@
+<app-loader></app-loader> 
+<div style="display: flex; flex-direction: column; min-height: 100vh;" [class.splash-layout-active]="isSplashScreenActive">
+  <app-header></app-header>
+  <div class="p-3 bg-light" style="flex-grow: 1;"> 
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>

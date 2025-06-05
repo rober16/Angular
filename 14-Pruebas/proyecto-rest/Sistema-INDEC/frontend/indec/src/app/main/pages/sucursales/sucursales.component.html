@@ -1,0 +1,44 @@
+<h3 i18n>Sucursales</h3>
+<form [formGroup]="form" class="col-12">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-3">
+      <label for="iprovincia" i18n>Provincia</label>
+      <select id="iprovincia" formControlName="codProvincia" class="form-select">
+        <option [ngValue]="0" i18n>Debe seleccionar una Provincia</option>
+        <option *ngFor="let n of provincias" [ngValue]="n.codProvincia">{{n.nomProvincia}}</option>
+      </select>
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+      <label for="ilocalidad" i18n>Localidad</label>
+      <select id="ilocalidad" formControlName="codLocalidad" class="form-select">
+        <option [ngValue]="0" i18n>Debe seleccionar una Localidad</option>
+        <option *ngFor="let n of localidadesFiltradas" [ngValue]="n.nroLocalidad">{{ n.nomLocalidad }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6 mb-3">
+      <div *ngIf="sucursales.length > 0" class="mt-4 sucursales-scroll">
+        <h3 i18n>Sucursales disponibles:</h3><br>
+        <ul class="list-group">
+          <li *ngFor="let sucursal of sucursales" class="list-group-item" (click)="seleccionarSucursal(sucursal)">
+            <h5>{{ sucursal.nomSucursal }}</h5>
+            <p i18n>Dirección: {{ sucursal.calle }} {{ sucursal.nroCalle }}</p>
+            <p i18n>Teléfono: {{ sucursal.telefonos }}</p>
+            <p i18n>Horarios de atención: {{ sucursal.horarioSucursal }}</p>
+            <p i18n>Servicios disponibles: {{ sucursal.serviciosDisponibles }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="sucursales.length === 0 && form.get('codLocalidad')?.value">
+        <p i18n>No hay sucursales disponibles para esta localidad.</p>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 mb-3" *ngIf="mostrarMapa">
+      <app-map [sucursales]="sucursales" [selectedSucursal]="selectedSucursal"></app-map>
+    </div>
+  </div>
+</form>

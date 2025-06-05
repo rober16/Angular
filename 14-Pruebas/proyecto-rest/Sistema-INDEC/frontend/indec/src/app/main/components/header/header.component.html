@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navbar-dark ">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="assets/logo.png" alt="" width="302" height="130">
+    </a>
+    <!-- Boton al hacer chica la pantalla de menu -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      i18n
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    
+    <!-- MENU -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="inicio" i18n>Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inicio/productos" i18n>Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inicio/sucursales"i18n>Sucursales</a>
+        </li>
+        <li class="nav-item">          
+          <div class="cart-icon" (click)="toggleCarrito()">
+            🛒 <span class="cart-count" *ngIf="cantidadProductos > 0">{{ cantidadProductos }}</span>
+          </div>
+        </li>
+        <li class="nav-item ">
+          <div [ngSwitch]="codIdioma"  (click)="cambiarIdioma()" style="cursor: pointer;">
+            <img *ngSwitchCase="1" src="assets/banderas/argentina.png" style="width: 32px; height: 32px; border-radius: 50%;" alt="Argentina"/>
+            <img *ngSwitchCase="2" src="assets/banderas/estados-unidos.png" style="width: 32px; height: 32px; border-radius: 50%;" alt="Estados Unidos"/>
+            <img *ngSwitchDefault src="assets/banderas/default.png" style="width: 32px; height: 32px; border-radius: 50%;" alt="Idioma no disponible"/>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+    
+  </div>
+  
+</nav>
+
+<!-- Modal del Carrito -->
+<div class="cart-modal" *ngIf="mostrarCarrito">
+  <div class="cart-content">
+    <div class="cart-header">
+      <h3 i18n>🛒 Mi Carrito</h3>
+      <button class="close-btn" (click)="toggleCarrito()">✖</button>
+    </div>
+
+    <ul *ngIf="productosCarrito.length > 0; else carritoVacio" class="cart-items">
+      <li *ngFor="let producto of productosCarrito" class="cart-item">
+        <img [src]="producto.imagen" alt="{{ producto.nomProducto }}" class="cart-item-img">
+        <div class="cart-item-info">
+          <p class="cart-item-name">{{ producto.nomProducto }}</p>
+          <p class="cart-item-subname">{{ producto.nomMarca }}</p>
+        </div>
+        <button class="delete-btn" (click)="eliminarDelCarrito(producto)">🗑</button>
+      </li>
+    </ul>
+
+    <ng-template #carritoVacio>
+      <p class="empty-cart-msg" i18n>Tu carrito está vacío</p>
+    </ng-template>
+
+    <form [formGroup]="form">
+      <div class="col-12 mb-3">
+        <label for="iprovincia" i18n>Provincia</label>
+        <select id="iprovincia" formControlName="codProvincia" class="form-select">
+          <option value="" i18n >Debe seleccionar una Provincia</option>
+          <option *ngFor="let provincia of provincias" [value]="provincia.codProvincia">
+            {{ provincia.nomProvincia }}
+          </option>
+        </select>
+      </div>
+      <div class="col-12 mb-3">
+        <label for="ilocalidad" i18n>Localidad</label>
+        <select id="ilocalidad" formControlName="codLocalidad" class="form-select">
+          <option value="" i18n>Debe seleccionar una Localidad</option>
+          <option *ngFor="let localidad of localidadesFiltradas" [value]="localidad.nroLocalidad">
+            {{ localidad.nomLocalidad }}
+          </option>
+        </select>
+      </div>
+    </form>
+
+    <button class="view-cart-btn" 
+      [routerLink]="['/inicio/comparar-productos']"  
+      [disabled]="productosCarrito.length === 0"
+      (click)="compararPrecios()"
+      i18n>
+    Comparar
+    </button>
+  </div>
+</div>

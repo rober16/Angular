@@ -1,0 +1,37 @@
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #adadad;
+    position: relative;
+    overflow: hidden;
+  }
+
+  
+  .splash-image {
+    width: 200px;
+    display: block; 
+    object-fit: cover;
+    transition: transform 5s ease-in-out;
+  }
+  
+  .skip-button {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: #2b5698;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .skip-button:hover {
+    background-color: #3770c5;;
+  }
+  
