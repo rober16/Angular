@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://services.superdiscows.das.ubp.edu.ar/" xmlns:tns="http://services.superdiscows.das.ubp.edu.ar/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ObtenerProductosRequest" type="tns:ObtenerProductosRequest"/>
+
+  <xs:element name="ObtenerProductosResponse" type="tns:ObtenerProductosResponse"/>
+
+  <xs:element name="ObtenerSucursalesRequest" type="tns:ObtenerSucursalesRequest"/>
+
+  <xs:element name="ObtenerSucursalesResponse" type="tns:ObtenerSucursalesResponse"/>
+
+  <xs:complexType name="ObtenerSucursalesRequest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="ObtenerSucursalesResponse">
+    <xs:sequence>
+      <xs:element name="SucursalesResponse" type="tns:sucursalBean" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sucursalBean">
+    <xs:sequence>
+      <xs:element name="calle" type="xs:string" minOccurs="0"/>
+      <xs:element name="coordLatitud" type="xs:string" minOccurs="0"/>
+      <xs:element name="coordLongitud" type="xs:string" minOccurs="0"/>
+      <xs:element name="horarioSucursal" type="xs:string" minOccurs="0"/>
+      <xs:element name="nomSucursal" type="xs:string" minOccurs="0"/>
+      <xs:element name="nroCalle" type="xs:int" minOccurs="0"/>
+      <xs:element name="nroLocalidad" type="xs:int" minOccurs="0"/>
+      <xs:element name="nroSucursal" type="xs:int" minOccurs="0"/>
+      <xs:element name="serviciosDisponibles" type="xs:int" minOccurs="0"/>
+      <xs:element name="telefonos" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ObtenerProductosRequest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="ObtenerProductosResponse">
+    <xs:sequence>
+      <xs:element name="ProductosResponse" type="tns:productosBean" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="productosBean">
+    <xs:sequence>
+      <xs:element name="codBarra" type="xs:string" minOccurs="0"/>
+      <xs:element name="descProducto" type="xs:string" minOccurs="0"/>
+      <xs:element name="fechaUltActualizacion" type="xs:string" minOccurs="0"/>
+      <xs:element name="imagen" type="xs:string" minOccurs="0"/>
+      <xs:element name="nomProducto" type="xs:string" minOccurs="0"/>
+      <xs:element name="nroCategoria" type="xs:int" minOccurs="0"/>
+      <xs:element name="nroMarca" type="xs:int" minOccurs="0"/>
+      <xs:element name="nroSucursal" type="xs:int" minOccurs="0"/>
+      <xs:element name="nroTipoProducto" type="xs:int" minOccurs="0"/>
+      <xs:element name="precio" type="xs:float" minOccurs="0"/>
+      <xs:element name="vigente" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

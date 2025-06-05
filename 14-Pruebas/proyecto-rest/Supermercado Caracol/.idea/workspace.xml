@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b08d62c1-b100-4cab-a77c-55628e743a16" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../SQL Scripts/script-indec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL Scripts/script-indec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL Scripts/script-proc-indec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL Scripts/script-proc-indec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL Scripts/script-proc-supermercado-caracol.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL Scripts/script-proc-supermercado-caracol.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/AbstractDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/AbstractDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/IndecResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/IndecResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/PrecioDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/PrecioDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/ProductoDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/ProductoDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/SucursalDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/resources/SucursalDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/utils/SOAPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/java/ar/edu/ubp/das/indecrest/utils/SOAPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Sistema-INDEC/backend/indecRest/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superCaracolRest/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/superCaracolRest/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Supermercado Disco/superDiscoWS/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Supermercado Disco/superDiscoWS/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Supermercado Vea/superVeaWS/src/main/resources/SuperVeaWS.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/../Supermercado Vea/superVeaWS/src/main/resources/SuperVeaWS.wsdl" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2uYQwvI321MokVFMuvchI9FCRgr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Develope",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Herramientas/Final DAS/FinalDAS/Supermercado Caracol/superCaracolRest",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b08d62c1-b100-4cab-a77c-55628e743a16" name="Changes" comment="" />
+      <created>1742423270378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742423270378</updated>
+      <workItem from="1742423271502" duration="15000" />
+      <workItem from="1743637861603" duration="417000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

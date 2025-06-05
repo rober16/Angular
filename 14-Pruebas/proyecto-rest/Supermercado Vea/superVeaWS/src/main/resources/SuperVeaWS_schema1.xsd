@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://services.superveaws.das.ubp.edu.ar/" xmlns:tns="http://services.superveaws.das.ubp.edu.ar/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ObtenerPreciosRequest" type="tns:ObtenerPreciosRequest"/>
+
+  <xs:element name="ObtenerPreciosResponse" type="tns:ObtenerPreciosResponse"/>
+
+  <xs:element name="ObtenerProductosRequest" type="tns:ObtenerProductosRequest"/>
+
+  <xs:element name="ObtenerProductosResponse" type="tns:ObtenerProductosResponse"/>
+
+  <xs:element name="ObtenerSucursalesRequest" type="tns:ObtenerSucursalesRequest"/>
+
+  <xs:element name="ObtenerSucursalesResponse" type="tns:ObtenerSucursalesResponse"/>
+
+  <xs:complexType name="ObtenerSucursalesRequest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="ObtenerSucursalesResponse">
+    <xs:sequence>
+      <xs:element name="SucursalesResponse" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ObtenerProductosRequest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="ObtenerProductosResponse">
+    <xs:sequence>
+      <xs:element name="ProductosResponse" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ObtenerPreciosRequest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="ObtenerPreciosResponse">
+    <xs:sequence>
+      <xs:element name="PreciosResponse" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
